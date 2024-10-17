@@ -25,6 +25,25 @@ For example, you could define tasks like:
 
 After defining your tasks, the program will generate suggestions and email them just as it would if the tasks came from Google Tasks.
 
+## Example Output
+
+Here is an example of a task and its generated suggestion:
+
+- **TASK**: Reply to Professor's email  
+  - **SUGGESTION**:
+    - Estimated time required: 15-30 minutes  
+
+      1. **Understand the Context**: Read the professor's email carefully to understand the main points and any specific questions or requests. Take note of the tone, whether it is formal or informal.
+
+      2. **Gather Information**: If the email requires you to provide specific information or updates, ensure you have all necessary details and documents at hand.
+
+      3. **Structure Your Reply**:
+         - **Greeting**: Begin with an appropriate greeting, such as "Dear Professor [Last Name],".
+         - **Thank You**: Express gratitude for the email or any assistance provided, if applicable.
+         - **Address Each Point**: Clearly respond to each question or topic mentioned in the professor's email. Use bullet points or paragraphs for clarity.
+         - **Provide Additional Information**: If necessary, include any additional information that might be relevant.
+         - **Ask Questions**: If you need clarification or further information, politely ask.
+
 ## Setting Up the Environment Variables
 
 Before running the project, you need to set up the environment variables to store sensitive information, such as your OpenAI API key and email password. This information should be placed in a `.env` file in the root directory of your project.
