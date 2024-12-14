@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000'; // 后端地址
+const API_BASE_URL = 'http://localhost:5000';
 
 async function getTasks() {
   const response = await fetch(`${API_BASE_URL}/tasks`);

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import api from '../services/api'; // 后端 API 服务
+import api from '../services/api';
 
 function HomePage() {
-  const [tasks, setTasks] = useState([]); // 保存任务列表
-  const [loading, setLoading] = useState(true); // 加载状态
-  const [selectedTask, setSelectedTask] = useState(null); // 当前选中的任务
-  const [advice, setAdvice] = useState(''); // 保存生成的建议
+  const [tasks, setTasks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedTask, setSelectedTask] = useState(null);
+  const [advice, setAdvice] = useState('');
 
   useEffect(() => {
     async function fetchTasks() {
       try {
         const response = await api.getTasks();
-        setTasks(Array.isArray(response) ? response : []); // 确保 tasks 是数组
+        setTasks(Array.isArray(response) ? response : []);
       } catch (error) {
         console.error("Failed to fetch tasks:", error);
       } finally {
@@ -22,12 +22,12 @@ function HomePage() {
   }, []);
 
   const handleGenerateAdvice = async (task) => {
-    setSelectedTask(task); // 设置当前选中的任务
-    setAdvice('Loading advice...'); // 显示加载提示
+    setSelectedTask(task);
+    setAdvice('Loading advice...');
 
     try {
-      const response = await api.getSuggestion(task.title, task.notes); // 调用后端 /suggestions API
-      setAdvice(response.suggestion); // 设置生成的建议
+      const response = await api.getSuggestion(task.title, task.notes);
+      setAdvice(response.suggestion);
     } catch (error) {
       console.error("Failed to generate advice:", error);
       setAdvice('Failed to generate advice. Please try again.');
@@ -35,8 +35,8 @@ function HomePage() {
   };
 
   const handleCloseAdvice = () => {
-    setSelectedTask(null); // 关闭建议窗口
-    setAdvice(''); // 清空建议
+    setSelectedTask(null);
+    setAdvice('');
   };
 
   if (loading) return <p>Loading tasks...</p>;
@@ -49,7 +49,7 @@ function HomePage() {
           <li key={index}>
             <h3>{task.title}</h3>
             <p>{task.notes}</p>
-            <button onClick={() => handleGenerateAdvice(task)}>Generate Advice</button> {/* 添加按钮 */}
+            <button onClick={() => handleGenerateAdvice(task)}>Generate Advice</button> {/* add button */}
           </li>
         ))}
       </ul>

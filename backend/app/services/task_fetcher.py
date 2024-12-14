@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 from app.services.google_auth import authenticate_google
 
 def fetch_tasks():
-    creds = authenticate_google()  # Google OAuth 授权
+    creds = authenticate_google()
     service = build('tasks', 'v1', credentials=creds)
     
     tasks = []

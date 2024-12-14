@@ -7,7 +7,7 @@ function SuggestionModal({ task, onClose }) {
   useEffect(() => {
     async function fetchSuggestion() {
       try {
-        const response = await api.getSuggestion(task.title, task.notes); // 调用后端建议 API
+        const response = await api.getSuggestion(task.title, task.notes);
         setSuggestion(response.suggestion);
       } catch (error) {
         console.error("获取建议时出错:", error);
@@ -15,14 +15,14 @@ function SuggestionModal({ task, onClose }) {
       }
     }
     fetchSuggestion();
-  }, [task]); // 当 task 更新时重新获取建议
+  }, [task]);
 
   return (
     <div className="modal">
       <div className="modal-content">
-        <h2>任务: {task.title} 的建议</h2>
+        <h2>Task: Suggestions of {task.title}</h2>
         <p>{suggestion}</p>
-        <button onClick={onClose}>关闭</button>
+        <button onClick={onClose}>Close</button>
       </div>
     </div>
   );

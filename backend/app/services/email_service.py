@@ -23,8 +23,7 @@ def send_task_email(task_suggestions):
     
     message.attach(MIMEText(body, 'html'))
 
-    # 发送邮件
     with smtplib.SMTP('smtp.gmail.com', 587) as server:
-        server.starttls()  # 启用加密
+        server.starttls()
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message.as_string())
