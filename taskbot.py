@@ -89,23 +89,15 @@ def send_email(task_suggestions):
 
 if __name__ == "__main__":
     print("-----------Getting TASKS-----------------")
-    tasks = get_tasks()
+    # tasks = get_tasks()
 
-    # # Define Tasks Manually Here
-    # tasks = [
-    #     {
-    #         'title': 'Create TaskBot',
-    #         'notes': 'TaskBot reads tasks from Google Tasks, generates suggestions for each task using OpenAI API, and sends a daily email with those suggestions.'
-    #     },
-    #     {
-    #         'title': "Reply for Professor's email",
-    #         'notes': 'none'
-    #     },
-    #     {
-    #         'title': 'Do 5 questions on leetcode',
-    #         'notes': 'Review dynamic programming algorithms'
-    #     }
-    # ]
+    # Define Tasks Manually Here
+    tasks = [
+        {
+            'title': 'PFN 1次選考',
+            'notes': '面接では事前に自己紹介スライド(2-3枚程度)をご準備いただき、当日は5分程度で自己紹介をお願いいたします。内容・フォーマットはお任せいたします。これまでの業務・研究の概略やご自身の強みなどをカバーしたスライドをご用意くださいませ。面接2営業日前までにご送付お願いいたします。'
+        }
+    ]
 
     print("-----------Taskbot is making suggestions for YOU----------------")
     task_suggestions = []
