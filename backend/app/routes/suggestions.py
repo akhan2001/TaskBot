@@ -1,5 +1,11 @@
+import os
 from flask import Blueprint, request, jsonify
 from app.services.openai_service import generate_suggestions
+from dotenv import load_dotenv
+
+load_dotenv()
+
+LANGUAGE = os.getenv("LANGUAGE", "English")  # 设置默认语言为 English
 
 bp = Blueprint('suggestions', __name__)
 
@@ -10,7 +16,9 @@ def get_suggestions():
     task_notes = data.get('notes', 'No Notes')
 
     try:
-        suggestion = generate_suggestions(task_title, task_notes)
+        # 调用 OpenAI 服务生成建议
+        suggestion = generate_suggestions(task_title, task_notes, language=LANGUAGE)
         return jsonify({'suggestion': suggestion}), 200
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        # 捕获异常并返回错误信息
+        return jsonify({'error': f"Failed to generate suggestion: {str(e)}"}), 500

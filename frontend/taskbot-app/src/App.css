@@ -1,61 +1,55 @@
-/* 全局背景和字体 */
 body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* 确保背景至少覆盖整个视口 */
-  background-color: #121212; /* 纯深灰背景 */
+  min-height: 100vh;
+  background-color: #121212;
   color: #E0E0E0;
 }
 
 html {
-  height: 100%; /* 确保 html 本身也填满页面 */
+  height: 100%;
 }
 
-/* 页面标题 */
 h1 {
   text-align: center;
   font-size: 2.5rem;
-  color: #64FFDA; /* 青绿色强调 */
+  color: #64FFDA;
   margin-bottom: 20px;
 }
 
-/* 列表容器 */
 ul {
   padding: 0;
-  margin: 0 auto; /* 居中列表 */
-  max-width: 700px; /* 列表最大宽度 */
+  margin: 0 auto;
+  max-width: 700px;
 }
 
 li {
-  list-style: none; /* 去掉默认的点 */
+  list-style: none;
 }
 
-/* 任务卡片样式 */
 .task-item {
-  background-color: #1e1e1e; /* 卡片背景 */
-  border: 1px solid #2a2a2a; /* 浅灰边框 */
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
   padding: 15px 20px;
-  margin: 20px auto; /* 垂直间距 */
-  border-radius: 10px; /* 圆角效果 */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* 微妙阴影 */
-  transition: transform 0.3s, box-shadow 0.3s; /* 鼠标悬浮动画 */
-  max-width: 600px; /* 卡片宽度限制 */
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 600px;
   color: #e0e0e0;
 }
 
-/* 鼠标悬浮效果 */
 .task-item:hover {
-  transform: translateY(-3px); /* 鼠标悬浮时略微抬起 */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7); /* 增加阴影 */
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* 按钮样式 */
 button {
-  background-color: #2e2e2e; /* 深灰色按钮 */
-  color: #e0e0e0; /* 浅灰色文字 */
+  background-color: #2e2e2e;
+  color: #e0e0e0;
   padding: 8px 16px;
-  border: 1px solid #3a3a3a; /* 边框色稍浅 */
+  border: 1px solid #3a3a3a;
   border-radius: 6px;
   font-size: 14px;
   font-weight: bold;
@@ -63,25 +57,22 @@ button {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-/* 鼠标悬浮效果 */
 button:hover {
-  background-color: #383838; /* 鼠标悬浮时变浅 */
-  transform: scale(1.03); /* 略微放大 */
+  background-color: #383838;
+  transform: scale(1.03);
 }
 
-/* 鼠标点击效果 */
 button:active {
-  transform: scale(0.97); /* 点击时缩小 */
+  transform: scale(0.97);
 }
 
-/* 模态框样式 */
 .advice-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,24 +80,24 @@ button:active {
 }
 
 .advice-content {
-  background: #1f1f1f; /* 模态框背景 */
-  color: #e0e0e0; /* 模态框字体颜色 */
+  background: #1f1f1f;
+  color: #e0e0e0;
   padding: 30px;
   border-radius: 16px;
   max-width: 600px;
   width: 90%;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* 模态框阴影 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .advice-content h2 {
   margin-bottom: 15px;
-  color: #64ffda; /* 强调颜色 */
+  color: #64ffda;
 }
 
 .advice-content button {
   margin-top: 20px;
-  background-color: #2d2d2d; /* 按钮背景 */
+  background-color: #2d2d2d;
   color: #ffffff;
 }
 
