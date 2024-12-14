@@ -2,5 +2,6 @@ venv/
 .env
 credentials.json
 test.py
-*.pyc
+
 __pycache__/
+*.pyc
