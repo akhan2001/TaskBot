@@ -94,8 +94,20 @@ if __name__ == "__main__":
     # Define Tasks Manually Here
     tasks = [
         {
-            'title': 'PFN 1次選考',
-            'notes': '面接では事前に自己紹介スライド(2-3枚程度)をご準備いただき、当日は5分程度で自己紹介をお願いいたします。内容・フォーマットはお任せいたします。これまでの業務・研究の概略やご自身の強みなどをカバーしたスライドをご用意くださいませ。面接2営業日前までにご送付お願いいたします。'
+            'title': 'Morning Routine',
+            'notes': 'Complete your morning routine including exercise, breakfast, and planning for the day.'
+        },
+        {
+            'title': 'Pray',
+            'notes': 'Set aside time for prayer and reflection.'
+        },
+        {
+            'title': 'Quran',
+            'notes': 'Read and reflect on a portion of the Quran.'
+        },
+        {
+            'title': 'DevOps Study',
+            'notes': 'Spend time studying DevOps practices and tools.'
         }
     ]
 
